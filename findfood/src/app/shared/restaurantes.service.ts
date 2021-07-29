@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from "rxjs/operators";
@@ -55,4 +54,6 @@ export class RestaurantesService {
     .doc(idRestaurante).collection('avaliações').doc(idUsuario).delete();
   }
 
+
+  
 }

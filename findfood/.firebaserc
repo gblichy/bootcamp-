@@ -1,9 +1,9 @@
 {
   "targets": {
-    "findfood-faculdadeiv2": {
+    "findfood-faculdadeiv2-2021": {
       "hosting": {
         "findfood": [
-          "findfood-faculdadeiv2"
+          "findfood-faculdadeiv2-2021"
         ]
       }
     }

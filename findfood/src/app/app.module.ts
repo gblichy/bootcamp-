@@ -29,9 +29,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { NovoRestauranteComponent } from './novo-restaurante/novo-restaurante.component';
 import { RestauranteComponent } from './restaurante/restaurante.component';
-import { BuscaRestaurantePipe } from './restaurantes/busca-restaurante.pipe';
 import { environment } from 'src/environments/environment.prod';
+import { FiltroRestaurantePipe } from './shared/filtro-restaurante.pipe';
+import { LoginPageComponent } from './login-page/login-page.component';
 
+//Tradução
+import { registerLocaleData } from '@angular/common';
+import localeBr from '@angular/common/locales/pt';
+
+registerLocaleData(localeBr, 'pt')
 
 @NgModule({
   declarations: [
@@ -39,7 +45,8 @@ import { environment } from 'src/environments/environment.prod';
     RestaurantesComponent,
     NovoRestauranteComponent,
     RestauranteComponent,
-    BuscaRestaurantePipe,
+    FiltroRestaurantePipe,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,7 @@ import { environment } from 'src/environments/environment.prod';
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
-    // forms
+    //Forms
     ReactiveFormsModule,
     FormsModule,
 
