@@ -16,14 +16,14 @@
             </button>
           </div>
           <div id="autor">
-            <img [src]="restaurante.autorRestaurante.photoURL" width="60">
-            <p>Postado por {{ restaurante.autorRestaurante.displayName }}</p>
+            <img src="../../assets/user-placeholder.jpg" width="60">
+            <p>Postado por Bootcamper</p>
           </div>
         </div>
       </div>
-    <img src="../../assets/rest3.png" width="500" id="restaurante-img">
+    <img [src]="restaurante.downloadUrl" width="500" id="restaurante-img">
     <p>
-      Restaurante localizado em {{ restaurante.cidade }} - {{ restaurante.estado }}
+      Restaurante localizado em {{ restaurante.cidade }} - {{ restaurante.estado.nome }}
     </p>
   </section>
 
@@ -36,8 +36,12 @@
       <mat-card *ngFor="let comentario of comentarios_usuarios">
         <div id="usuario">
           <div>
-            <span>Comentado em: <i>{{ comentario.comentadoEm | date: 'short' }}</i></span>
+            <img [src]="comentario.autor.foto" width="30">
+            <span>{{ comentario.autor.nome }} - <i>{{ formataData(comentario.comentadoEm.seconds) }}</i></span>
           </div>
+          <mat-icon id="excluir-comentario" (click)="excluirComentario(comentario)">
+            delete
+          </mat-icon>
         </div>
         <p>"{{ comentario.comentario }}"</p>
         <div id="star-rating">

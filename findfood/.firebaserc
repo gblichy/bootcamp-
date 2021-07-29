@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "findfood-faculdadeiv2": {
+      "hosting": {
+        "findfood": [
+          "findfood-faculdadeiv2"
+        ]
+      }
+    }
+  }
+}

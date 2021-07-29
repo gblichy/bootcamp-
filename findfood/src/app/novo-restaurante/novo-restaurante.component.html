@@ -50,7 +50,7 @@
                 <input hidden (change)="onFileSelect($event)" #fileInput type="file" id="File">
             </div>
 
-            <!-- Botão que dará display da imagem -->
+            <!-- Div que dará display da imagem -->
             <div id="imagem-content" (click)="fileInput.click()">
                 <mat-icon *ngIf="!selectedFile">photo_camera</mat-icon>
                 <img *ngIf="selectedFile" [src]="selectedFile" width="300">
